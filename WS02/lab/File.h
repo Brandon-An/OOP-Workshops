@@ -4,6 +4,9 @@ namespace sdds {
    bool openFile(const char filename[]);
    void closeFile();
    int noOfRecords();
+   bool read (char* string);
+   bool read (int &number);
+   bool read (double &salary);
    // TODO: Declare read prototypes
  
 

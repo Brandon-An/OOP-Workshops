@@ -509,19 +509,26 @@ The CalorieList class should dynamically hold series of Food items and display t
 
 
 Following are the mandatory public member functions:  
-  
+      
+      void init(int size); 
       // sets the CalorieList to accept the "size" number of Food Items. 
       // This function is called to prepare the CalorieList for accepting food items
-      void init(int size); 
+      
+      
+      bool add(const char* item_name, int calories, int when);
       // Adds Food Items using their Name, Calorie count and time of consumption up to 
       // the number set in the init() function, returns true if successful.
-      bool add(const char* item_name, int calories, int when);
+      
+      
+      void display()const;
       // Displays the report with food information and the total calorie consumed in the day
       // as shown in the report sample
-      void display()const;
+      
+      
+      void deallocate();
       // Releases all the memory used. After this function init() can be called for another
       // report;
-      void deallocate();
+      
 
 
 ## The tester program

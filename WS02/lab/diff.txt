@@ -1,0 +1,14 @@
+In line number 12 of your output:
+The output should be:
+3- 109635: Kirk Van Houten, 96730.1
+                                 ^
+But your output is: 
+3- 109635: Kirk Van Houten, 96730
+                                  ^
+
+Unmatched character details:
+The character in column 35 is supposed to be:
+  [.] ASCII code(46)
+but you printed
+  [Empty Line] ASCII code(0)
+

@@ -20,15 +20,33 @@ namespace sdds {
    void closeFile() {
       if (fptr) fclose(fptr);
    }
-   /* TODO: read functions go here    
-   bool read(................) {
-      return .....
+   
+   
+   bool read(int &number) {
+      int fr;
+      fr = fscanf(fptr, "%d,", &number);
+      if (fr == 1)
+      	return true;
+      else
+        return false;
    }
-   bool read(................) {
-      return .....
+   bool read(double &salary) {
+      int fr;
+      fr = fscanf(fptr, "%lf,", &salary);
+      if (fr == 1)
+      	return true;
+      else
+        return false;
    }
-   bool read(................) {
-      return .....
+   bool read (char *string) {
+      int fr;
+      fr = fscanf(fptr, "%[^\n]\n", string);
+      if (fr == 1)
+      	return true;
+      else
+        return false;
    }
-   */
+   
+
+   
 }

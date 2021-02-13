@@ -21,4 +21,24 @@ namespace sdds {
       if (fptr) fclose(fptr);
    }
 
+   bool read (char *string) {
+      int fr;
+      fr = fscanf(fptr, "%[^,],", string);
+      if (fr == 1)
+      	return true;
+      else
+        return false;
+   }
+
+   bool read(int &number) {
+      int fr;
+      fr = fscanf(fptr, "%d\n", &number);
+      if (fr == 1)
+      	return true;
+      else
+        return false;
+   }
+
+   
+
 }

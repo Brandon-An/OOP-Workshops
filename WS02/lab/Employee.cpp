@@ -26,9 +26,29 @@ namespace sdds {
    // TODO: Finish the implementation of the 1 arg load function which
    // reads one employee record from the file and loads it into the employee reference
    // argument
-   bool load(...............) {
+   bool load(Employee *emp) {
       bool ok = false;
       char name[128];
+      int len;
+      int i;
+      double j;
+      bool r1, r2, r3;
+
+      r1 = read(i);
+      emp->m_empNo = i;
+
+      r2 = read(j);
+      emp->m_salary = j;
+
+      r3 = read(name);
+      len = strLen(name);
+      emp->m_name = new char[len+1];
+      emp->m_name[len] = '\0';
+      strCpy(emp->m_name, name);
+
+      if (r1 && r2 && r3)
+	      ok = true;
+
       /* if reading of employee number, salay and name are successful
               allocate memory to the size of the name + 1
               and keep its address in the name of the Employee Reference
@@ -44,7 +64,19 @@ namespace sdds {
    bool load() {
       bool ok = false;
       int i = 0;
+      int j;
+      
       if (openFile(DATAFILE)) {
+         j = noOfRecords();
+	 noOfEmployees = j;
+         Employee *emp = new Employee[j];
+	 employees = emp;
+         for (i = 0; i <= j-1; i++){
+            load(&(emp[i]));
+           // std::cout << emp[i].m_empNo << emp[i].m_name << emp[i].m_salary << std::endl;
+
+         }
+
          /* 
           Set the noOfEmployees to the number of recoreds in the file.
           dyanamically allocated an array of employees into the global
@@ -62,17 +94,52 @@ namespace sdds {
 
           close the file
           */
+	 if (i != noOfEmployees){
+		 std::cout << "Error: incorrect number of records read; the data is possibly corrupted.";
+      		 closeFile();
+	 }
+	 else{
+		 ok = true;
+	 }
       }
-      else {
+      else{
          cout << "Could not open data file: " << DATAFILE<< endl;
       }
       return ok;
    }
 
    // TODO: Implementation for the display functions go here
+   void display(){
+	int i;
+	sort();
+	   std::cout << "Employee Salary report, sorted by employee number" << endl;
+	   std::cout << "no- Empno, Name, Salary" << endl;
+	   std::cout << "------------------------------------------------" << endl;
+	for (i = 0; i < noOfEmployees; i++){
+	   std::cout << i+1 << "- ";
+	   display(employees[i]);
+	}
+   }
 
+   void display(Employee &emp){
+	   std::cout << emp.m_empNo << ": ";
+	   std::cout << emp.m_name << ", ";
+	   std::cout.precision(6);
+	   std::cout << emp.m_salary << endl;
+	   return;
+   }
 
+		
    // TODO: Implementation for the deallocateMemory function goes here
+   void deallocateMemory (){
+	   int i;
+	   for (i = 0; i < noOfEmployees; i++){
+		   delete [] employees[i].m_name;
+	   }
+	delete [] employees;
+	employees = nullptr;
+	return;
+   }
 
 
 
