@@ -1,0 +1,14 @@
+In line number 27 of your output:
+The output should be:
+Enter 6 labels:
+^
+But your output is: 
+AEnter 6 labels:
+^
+
+Unmatched character details:
+The character in column 1 is supposed to be:
+  [E] ASCII code(69)
+but you printed
+  [A] ASCII code(65)
+

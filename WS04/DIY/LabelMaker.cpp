@@ -34,19 +34,12 @@ namespace sdds
             totalLabel[i].printLabel();
             std::cout << std::endl;
         }
-        deallocate();
     }
 
     LabelMaker::~LabelMaker()
     {
-        // delete [] totalLabel;
-        // *totalLabel = nullptr;
-    }
-
-    void LabelMaker::deallocate()
-    {
-        delete [] totalLabel;
-        *totalLabel = nullptr;
+         delete [] totalLabel;
+         totalLabel = nullptr;
     }
 
 } // namespace sdds

@@ -1,0 +1,192 @@
+Script started on Sun 14 Feb 2021 01:03:37 PM EST
+==207991== Memcheck, a memory error detector
+==207991== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==207991== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==207991== Command: ws
+==207991== 
+EmptyOne1
+
+EmptyOne2
+
+/----------------------------------------\
+|                                        |
+| Professor's Label Maker Program Tester |
+|                                        |
+\----------------------------------------/
+
+Enter the follwing information:
+# of Labels > 6
+1> Applied Problem Solving
+2> Computer Principles for Programmers
+3> Communicating Across Contexts (Enriched)
+4> Introduction to Programming Using C
+5> Introduction to UNIX/Linux and the Internet
+6> Computer Programming and Analysis, Co-op (Work-Integrated Learning option only)
+
+Number of labels to create: 6
+AEnter 6 labels:
+Enter label number 1
+> pplied Problem Solving
+Computer Principles for Programmers
+CEnter label number 2
+> Enter label number 3
+> ommunicating Across Contexts (Enriched)
+Introduction to Programming Using C
+IntrodEnter label number 4
+> Enter label number 5
+> uction to UNIX/Linux and the Internet
+Computer Programming and AnaEnter label number 6
+> lysis, Co-op (Work-Integrated Learning option only)
+==207991== Invalid write of size 1
+==207991==    at 0x400DD6: sdds::strCpy(char*, char const*) (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x4012DC: sdds::Label::readLabel() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401724: sdds::LabelMaker::readLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C82: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==  Address 0x5afe107 is 0 bytes after a block of size 71 alloc'd
+==207991==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==207991==    by 0x4012BF: sdds::Label::readLabel() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401724: sdds::LabelMaker::readLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C82: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991== 
+==207991== Invalid write of size 1
+==207991==    at 0x400DB4: sdds::strCpy(char*, char const*) (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x4012DC: sdds::Label::readLabel() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401724: sdds::LabelMaker::readLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C82: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==  Address 0x5afe10f is 8 bytes after a block of size 71 alloc'd
+==207991==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==207991==    by 0x4012BF: sdds::Label::readLabel() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401724: sdds::LabelMaker::readLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C82: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991== 
++-------------------------+
+|                         |
+| Applied Problem Solving |
+|                         |
++-------------------------+
++-------------------------------------+
+|                                     |
+| Computer Principles for Programmers |
+|                                     |
++-------------------------------------+
++------------------------------------------+
+|                                          |
+| Communicating Across Contexts (Enriched) |
+|                                          |
++------------------------------------------+
++-------------------------------------+
+|                                     |
+| Introduction to Programming Using C |
+|                                     |
++-------------------------------------+
++---------------------------------------------+
+|                                             |
+| Introduction to UNIX/Linux and the Internet |
+|                                             |
++---------------------------------------------+
+==207991== Invalid read of size 1
+==207991==    at 0x401014: sdds::strLen(char const*) (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401350: sdds::Label::printLabel() const (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401775: sdds::LabelMaker::printLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C8E: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==  Address 0x5afe107 is 0 bytes after a block of size 71 alloc'd
+==207991==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==207991==    by 0x4012BF: sdds::Label::readLabel() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401724: sdds::LabelMaker::readLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C82: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991== 
++---------------------------------------------------------------------------------+
+|                                                                                 |
+==207991== Invalid read of size 1
+==207991==    at 0x4C2D104: strlen (vg_replace_strmem.c:461)
+==207991==    by 0x4F5AC39: length (char_traits.h:357)
+==207991==    by 0x4F5AC39: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (ostream:612)
+==207991==    by 0x401440: sdds::Label::printLabel() const (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401775: sdds::LabelMaker::printLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C8E: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==  Address 0x5afe107 is 0 bytes after a block of size 71 alloc'd
+==207991==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==207991==    by 0x4012BF: sdds::Label::readLabel() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401724: sdds::LabelMaker::readLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C82: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991== 
+==207991== Invalid read of size 1
+==207991==    at 0x5798A4D: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib64/libc-2.17.so)
+==207991==    by 0x578D751: fwrite (in /usr/lib64/libc-2.17.so)
+==207991==    by 0x4F5A923: sputn (streambuf:458)
+==207991==    by 0x4F5A923: __ostream_write<char, std::char_traits<char> > (ostream_insert.h:50)
+==207991==    by 0x4F5A923: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (ostream_insert.h:101)
+==207991==    by 0x4F5AC47: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (ostream:611)
+==207991==    by 0x401440: sdds::Label::printLabel() const (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401775: sdds::LabelMaker::printLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C8E: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==  Address 0x5afe10e is 7 bytes after a block of size 71 alloc'd
+==207991==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==207991==    by 0x4012BF: sdds::Label::readLabel() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401724: sdds::LabelMaker::readLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C82: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991== 
+==207991== Invalid read of size 1
+==207991==    at 0x5798A64: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib64/libc-2.17.so)
+==207991==    by 0x578D751: fwrite (in /usr/lib64/libc-2.17.so)
+==207991==    by 0x4F5A923: sputn (streambuf:458)
+==207991==    by 0x4F5A923: __ostream_write<char, std::char_traits<char> > (ostream_insert.h:50)
+==207991==    by 0x4F5A923: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (ostream_insert.h:101)
+==207991==    by 0x4F5AC47: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (ostream:611)
+==207991==    by 0x401440: sdds::Label::printLabel() const (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401775: sdds::LabelMaker::printLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C8E: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==  Address 0x5afe10d is 6 bytes after a block of size 71 alloc'd
+==207991==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==207991==    by 0x4012BF: sdds::Label::readLabel() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401724: sdds::LabelMaker::readLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C82: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991== 
+==207991== Invalid read of size 1
+==207991==    at 0x4C31D98: __GI_mempcpy (vg_replace_strmem.c:1539)
+==207991==    by 0x5798974: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib64/libc-2.17.so)
+==207991==    by 0x578D751: fwrite (in /usr/lib64/libc-2.17.so)
+==207991==    by 0x4F5A923: sputn (streambuf:458)
+==207991==    by 0x4F5A923: __ostream_write<char, std::char_traits<char> > (ostream_insert.h:50)
+==207991==    by 0x4F5A923: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (ostream_insert.h:101)
+==207991==    by 0x4F5AC47: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (ostream:611)
+==207991==    by 0x401440: sdds::Label::printLabel() const (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401775: sdds::LabelMaker::printLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C8E: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==  Address 0x5afe107 is 0 bytes after a block of size 71 alloc'd
+==207991==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==207991==    by 0x4012BF: sdds::Label::readLabel() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401724: sdds::LabelMaker::readLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C82: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991== 
+==207991== Invalid read of size 1
+==207991==    at 0x4C31DA6: __GI_mempcpy (vg_replace_strmem.c:1539)
+==207991==    by 0x5798974: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib64/libc-2.17.so)
+==207991==    by 0x578D751: fwrite (in /usr/lib64/libc-2.17.so)
+==207991==    by 0x4F5A923: sputn (streambuf:458)
+==207991==    by 0x4F5A923: __ostream_write<char, std::char_traits<char> > (ostream_insert.h:50)
+==207991==    by 0x4F5A923: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (ostream_insert.h:101)
+==207991==    by 0x4F5AC47: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (ostream:611)
+==207991==    by 0x401440: sdds::Label::printLabel() const (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401775: sdds::LabelMaker::printLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C8E: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==  Address 0x5afe108 is 1 bytes after a block of size 71 alloc'd
+==207991==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==207991==    by 0x4012BF: sdds::Label::readLabel() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x401724: sdds::LabelMaker::readLabels() (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991==    by 0x400C82: main (in /home/ban4/OOP-Workshops/WS04/DIY/ws)
+==207991== 
+| Computer Programming and Analysis, Co-op (Work-Integrated Learning option only) |
+|                                                                                 |
++---------------------------------------------------------------------------------+
+==207991== 
+==207991== HEAP SUMMARY:
+==207991==     in use at exit: 0 bytes in 0 blocks
+==207991==   total heap usage: 9 allocs, 9 frees, 73,353 bytes allocated
+==207991== 
+==207991== All heap blocks were freed -- no leaks are possible
+==207991== 
+==207991== For lists of detected and suppressed errors, rerun with: -s
+==207991== ERROR SUMMARY: 43 errors from 8 contexts (suppressed: 0 from 0)
+
+Script done on Sun 14 Feb 2021 01:03:40 PM EST

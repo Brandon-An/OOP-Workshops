@@ -15,7 +15,6 @@ namespace sdds
         void readLabels();
         void printLabels();
         ~LabelMaker();
-        void deallocate();
     };
 } //namespace sdds
 #endif
