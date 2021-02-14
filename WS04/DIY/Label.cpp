@@ -45,7 +45,7 @@ namespace sdds
         scanf("%[^\n]%c", text, &one);
         delete[] m_content;
         m_content = new char[71];
-        strCpy(m_content, text);
+        strnCpy(m_content, text, 70);
 
         char string[9] = "+-+|+-+|";
         strCpy(m_frame, string);
