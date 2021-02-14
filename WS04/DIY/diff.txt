@@ -3,7 +3,7 @@ The output should be:
 Enter 6 labels:
 ^
 But your output is: 
-AEnter 6 labels:
+Applied Problem Solving
 ^
 
 Unmatched character details:

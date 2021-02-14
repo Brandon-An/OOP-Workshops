@@ -1,7 +1,6 @@
+Constructors are necesarry for ensuring that objects are standardized and initialized with good values. Destructors prevent memory leaks when allocating memory in the heap. In this assignment a string of 70 characters had to be allocated in heap memory. 
 
+One challenge was making sure that no matter the length of the string input by the user the output had to be truncated to 70 characters. This could be ensured by using strnCpy to limit the number of characters copied to pointer. 
 
-
-
-
-
+Additionally, when reading from the user, the input has to be read to the end of line, not to the first whitespace. This means that one has to use a different set of tools aside from cin. I chose to use scanf in combination with a regular expression to ignore whitespace. Solutions on the internet also suggest using string type and the getline function. I chose not to use these since their types made copying their content to a pointer very difficult.
 
