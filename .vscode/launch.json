@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "C:\\Users\\Administrator.PC-201704122323\\VSCode\\OOP-Workshops\\WS04\\DIY\\a.exe",
+            "program": "C:\\Users\\Administrator.PC-201704122323\\VSCode\\OOP-Workshops\\WS05\\lab\\a.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}\\ws03\\DIY",
